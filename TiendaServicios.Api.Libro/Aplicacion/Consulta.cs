@@ -20,7 +20,7 @@ namespace TiendaServicios.Api.Libro.Aplicacion
         public class Manejador : IRequestHandler<Ejecuta, List<LibroMaterialDto>>
         {
             private readonly ContextoLibreria _contexto;
-            private readonly IMapper _mapper;
+            private readonly IMapper _mapper; 
 
             public Manejador(ContextoLibreria contexto, IMapper mapper)
             {
