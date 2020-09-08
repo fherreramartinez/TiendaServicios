@@ -18,7 +18,7 @@ namespace TiendaServicios.Api.Libro.Tests
     {
         private IEnumerable<LibreriaMaterial> ObtenerDataPrueba()
         {
-            //Este método es para llenar con data genfu
+            //Este método es para llenar con data genfu, nueva ejecuciòn
             A.Configure<LibreriaMaterial>()
                 .Fill(x => x.Titulo).AsArticleTitle()
                 .Fill(x => x.LibreriaMaterialId, () => { return Guid.NewGuid(); });
