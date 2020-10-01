@@ -57,7 +57,7 @@ namespace TiendaServicios.Api.Libro.Tests
         [Fact]
         public async void GetLibroPorId ()
         {
-          //  System.Diagnostics.Debugger.Launch();
+           // System.Diagnostics.Debugger.Launch();
             var mockContexto = CrearContexto();
             var mapConfig = new MapperConfiguration(cfg =>
             {
@@ -79,7 +79,7 @@ namespace TiendaServicios.Api.Libro.Tests
         [Fact]
         public async void GetLibros()
         {
-            //System.Diagnostics.Debugger.Launch();
+           // System.Diagnostics.Debugger.Launch();
             //1. Emular a la instancia de entity framework - ContextoLibreria
             var mockContexto = CrearContexto();
             //2. Emular al mapping IMapper
@@ -120,7 +120,7 @@ namespace TiendaServicios.Api.Libro.Tests
             request.AutorLibro = Guid.Empty;
             request.FechaPublicacion = DateTime.Now;
 
-            var manejador = new Nuevo.Manejador(contexto, null);
+            var manejador = new Nuevo.Manejador(contexto);
             var libro =  await manejador.Handle(request, new System.Threading.CancellationToken());
 
             Assert.True(libro != null);

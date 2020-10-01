@@ -43,6 +43,12 @@ namespace TiendaServicios.Api.Libro.Aplicacion
                 _eventBus = eventBus;
             }
 
+            public Manejador(ContextoLibreria contexto)
+            {
+                _contexto = contexto;                
+            }
+
+
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 var libro = new LibreriaMaterial
