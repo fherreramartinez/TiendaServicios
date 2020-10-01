@@ -61,7 +61,11 @@ namespace TiendaServicios.Api.Libro.Aplicacion
                 _contexto.LibreriaMaterial.Add(libro);
                 var value = await _contexto.SaveChangesAsync();
 
-                _eventBus.Publish(new EmailEventoQueue("fandres2002@hotmail.com", request.Titulo, "Este contenido es un ejemplo"));
+                if (_eventBus != null)
+                {
+                    _eventBus.Publish(new EmailEventoQueue("fandres2002@hotmail.com", request.Titulo, "Este contenido es un ejemplo"));
+                }
+                
 
                 if (value > 0)
                 {
