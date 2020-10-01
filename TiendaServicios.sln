@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiendaServicios.Api.Libro.T
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{00A3599D-F1E8-4171-9D38-745873C36813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.Gateway", "TiendaServicios.Api.Gateway\TiendaServicios.Api.Gateway.csproj", "{4B467EDA-EE57-4E5D-B2BC-7016CEFE71D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiendaServicios.Api.Gateway", "TiendaServicios.Api.Gateway\TiendaServicios.Api.Gateway.csproj", "{4B467EDA-EE57-4E5D-B2BC-7016CEFE71D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiendaServicios.RabbitMQ.Bus", "TiendaServicios.RabbitMQ.Bus\TiendaServicios.RabbitMQ.Bus.csproj", "{5B26E092-C6E9-4E7D-B228-BE42522F1D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Mensajeria.Email", "TiendaServicios.Mensajeria.Email\TiendaServicios.Mensajeria.Email.csproj", "{EC187B3B-C2D5-48DD-9AB4-82E3A1EA1886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{4B467EDA-EE57-4E5D-B2BC-7016CEFE71D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B467EDA-EE57-4E5D-B2BC-7016CEFE71D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B467EDA-EE57-4E5D-B2BC-7016CEFE71D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B26E092-C6E9-4E7D-B228-BE42522F1D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B26E092-C6E9-4E7D-B228-BE42522F1D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B26E092-C6E9-4E7D-B228-BE42522F1D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B26E092-C6E9-4E7D-B228-BE42522F1D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC187B3B-C2D5-48DD-9AB4-82E3A1EA1886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC187B3B-C2D5-48DD-9AB4-82E3A1EA1886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC187B3B-C2D5-48DD-9AB4-82E3A1EA1886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC187B3B-C2D5-48DD-9AB4-82E3A1EA1886}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
