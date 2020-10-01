@@ -18,7 +18,7 @@ namespace TiendaServicios.Mensajeria.Email.SendGridLibreria.Implement
                 var sendGridCliente = new SendGridClient(data.SendGridAPIKey);
                 var destinatario = new EmailAddress(data.EmailDestinatario, data.NombreDestinatario);
                 var tituloEmail = data.Titulo;
-                var sender = new EmailAddress("fandres2002@hotmail.com", "Freddy Herrera");
+                var sender = new EmailAddress("fandres2002@hotmail.com", "Freddy Herrera M");
                 var contenidoMensaje = data.Contenido;
                 var objMensaje = MailHelper.CreateSingleEmail(sender, destinatario, tituloEmail, contenidoMensaje, contenidoMensaje);
 
