@@ -57,7 +57,7 @@ namespace TiendaServicios.Api.Libro.Tests
         [Fact]
         public async void GetLibroPorId ()
         {
-            System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
             var mockContexto = CrearContexto();
             var mapConfig = new MapperConfiguration(cfg =>
             {
