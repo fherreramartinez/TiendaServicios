@@ -31,7 +31,7 @@ namespace TiendaServicios.Api.Autor.Controllers
         [HttpGet]
         public async Task<ActionResult<List<AutorDto>>> GetAutores()
         {
-            return await _mediator.Send(new Consulta.ListaAutor());
+            return await _mediator.Send(new Consulta.ListaAutor());    
         }
 
         [HttpGet("{id}")]
