@@ -21,7 +21,7 @@ using TiendaServicios.Mensajeria.Email.SendGridLibreria.Interface;
 using TiendaServicios.RabbitMQ.Bus.BusRabbit;
 using TiendaServicios.RabbitMQ.Bus.EventoQueue;
 using TiendaServicios.RabbitMQ.Bus.Implement;
-
+using TiendaServicios.Api.Autor.Modules.Swagger;
 namespace TiendaServicios.Api.Autor
 {
     public class Startup
@@ -41,7 +41,7 @@ namespace TiendaServicios.Api.Autor
                 var scopeFactory = sp.GetRequiredService<IServiceScopeFactory>();
                 return new RabbitEventBus(sp.GetService<IMediator>(), scopeFactory);
             });
-
+           
             services.AddSingleton<ISendGridEnviar, SendGridEnviar>();
             services.AddTransient<EmailEventoManejador>();
 
@@ -56,7 +56,7 @@ namespace TiendaServicios.Api.Autor
 
             services.AddMediatR(typeof(Nuevo.Manejador).Assembly);
             services.AddAutoMapper(typeof(Consulta.Manejador));
-
+            services.AddSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

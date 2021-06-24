@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TiendaServicios.Api.Autor.Aplicacion;
 using TiendaServicios.Api.Autor.Dto;
 using TiendaServicios.Api.Autor.Modelo;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace TiendaServicios.Api.Autor.Controllers
 {
@@ -20,6 +22,8 @@ namespace TiendaServicios.Api.Autor.Controllers
         public AutorController(IMediator mediator)
         {
             _mediator = mediator;
+
+
         }
 
         [HttpPost]
@@ -28,7 +32,14 @@ namespace TiendaServicios.Api.Autor.Controllers
             return await _mediator.Send(data);
         }
 
+        /// <summary>
+        ///El método obtiene autores.        
+        /// </summary>        
+        /// <response code="200">OK. Devuelve el objeto solicitado.</response>        
+        /// <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>         
+        [AllowAnonymous]
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]       
         public async Task<ActionResult<List<AutorDto>>> GetAutores()
         {
             return await _mediator.Send(new Consulta.ListaAutor());    
